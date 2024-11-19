@@ -16,6 +16,8 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo "🍏 This job's status is ${{ job.status }}.."
       - run: echo "Goedemorgen"
       - run: vendor/bin/phphstan analyse
+      - run: vendor/bin/pint 
+      - run: npx playwright test
