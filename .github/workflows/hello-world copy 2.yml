@@ -1,5 +1,5 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub ActionsPHP 🚀
+run-name: ${{ github.actor }} is testing out GitHub ActionsPLAY 🚀
 on: [push]
 
 jobs:
@@ -23,4 +23,4 @@ jobs:
         with:
           php-version: '8.3'
       - run: composer install
-      - run: vendor/bin/phpstan analyse
+      - run: npx playwright test
